@@ -16,7 +16,10 @@ header > h1 {
   text-align: center;
   font-family: sans-serif;
 }
-
+img {
+  height: 100px;
+  width: 100px;
+}
 .scoreBoard {
   border: 3px solid #ffffff;
   border-radius: 5px;
@@ -57,4 +60,12 @@ header > h1 {
 
 .resultMessage > p {
   text-align: center;
+}
+
+/* .userChoices {
+  text-align: center;
+} */
+
+.userInput {
+  display: inline-block;
 }
