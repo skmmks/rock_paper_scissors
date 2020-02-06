@@ -49,3 +49,12 @@ header > h1 {
   top: 30px;
   right: -20px;
 }
+
+.resultMessage {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.resultMessage > p {
+  text-align: center;
+}
