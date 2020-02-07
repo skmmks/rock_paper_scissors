@@ -16,8 +16,26 @@ const getComputerChoice = () => {
 
 const game = userChoice => {
   const computerChoice = getComputerChoice();
-  console.log("User Chooses: " + userChoice);
-  console.log("Computer Chooses: " + computerChoice);
+  console.log("user", userChoice);
+  console.log("comp", computerChoice);
+
+  switch (userChoice + computerChoice) {
+    case "rockscissors":
+    case "paperrock":
+    case "scissorspaper":
+      console.log("user wins");
+      break;
+    case "rockpaper":
+    case "paperscissors":
+    case "scissorsrock":
+      console.log("comp wins");
+      break;
+    case "rockrock":
+    case "paperpaper":
+    case "scissorsscissors":
+      console.log("its a tie");
+      break;
+  }
 };
 
 const main = () => {
