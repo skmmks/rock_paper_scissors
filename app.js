@@ -14,11 +14,19 @@ const getComputerChoice = () => {
   return choices[randomNum];
 };
 
+const convertToUpperCase = lc => {
+  if (lc === "rock") return "Rock";
+  if (lc === "paper") return "Paper";
+  return "Scissors";
+};
+
 const userWin = (userChoice, computerChoice) => {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = `${userChoice} beats ${computerChoice} You Win! `;
+  result_p.innerHTML = `${convertToUpperCase(
+    userChoice
+  )} beats ${convertToUpperCase(computerChoice)} You Win! `;
 };
 
 const userLose = () => {};
