@@ -13,21 +13,22 @@ const getComputerChoice = () => {
   const randomNum = Math.floor(Math.random() * 3);
   return choices[randomNum];
 };
-console.log(getComputerChoice());
 
 const game = userChoice => {
-  console.log(userChoice);
+  const computerChoice = getComputerChoice();
+  console.log("User Chooses: " + userChoice);
+  console.log("Computer Chooses: " + computerChoice);
 };
 
 const main = () => {
   rock_div.addEventListener("click", function() {
-    game("rock was clicked");
+    game("rock");
   });
   paper_div.addEventListener("click", function() {
-    game("paper was clicked");
+    game("paper");
   });
   scissors_div.addEventListener("click", function() {
-    game("scissors was clicked");
+    game("scissors");
   });
 };
 
