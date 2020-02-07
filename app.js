@@ -14,9 +14,11 @@ const getComputerChoice = () => {
   return choices[randomNum];
 };
 
-const userWin = () => {
+const userWin = (userChoice, computerChoice) => {
   userScore++;
-  console.log(userScore);
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_div.innerHTML = `${userChoice} beats ${computerChoice} You Win! `;
 };
 
 const userLose = () => {};
@@ -30,17 +32,17 @@ const game = userChoice => {
     case "rockscissors":
     case "paperrock":
     case "scissorspaper":
-      userWin();
+      userWin(userChoice, computerChoice);
       break;
     case "rockpaper":
     case "paperscissors":
     case "scissorsrock":
-      userLose();
+      userLose(userChoice, computerChoice);
       break;
     case "rockrock":
     case "paperpaper":
     case "scissorsscissors":
-      userTie();
+      userTie(userChoice, computerChoice);
       break;
   }
 };
