@@ -14,10 +14,14 @@ const game = userChoice => {
 
 const main = () => {
   rock_div.addEventListener("click", function() {
-    console.log("clicked rock");
+    game("rock was clicked");
   });
-  paper_div.addEventListener("click", function() {});
-  scissors_div.addEventListener("click", function() {});
+  paper_div.addEventListener("click", function() {
+    game("paper was clicked");
+  });
+  scissors_div.addEventListener("click", function() {
+    game("scissors was clicked");
+  });
 };
 
 main();
