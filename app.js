@@ -8,6 +8,10 @@ const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
 
+const game = userChoice => {
+  console.log(userChoice);
+};
+
 const main = () => {
   rock_div.addEventListener("click", function() {
     console.log("clicked rock");
