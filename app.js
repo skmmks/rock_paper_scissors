@@ -14,26 +14,36 @@ const getComputerChoice = () => {
   return choices[randomNum];
 };
 
+const userWin = () => {
+  console.log("user wins");
+};
+
+const userLose = () => {
+  console.log("user lose");
+};
+
+const userTie = () => {
+  console.log("usre tie");
+};
+
 const game = userChoice => {
   const computerChoice = getComputerChoice();
-  console.log("user", userChoice);
-  console.log("comp", computerChoice);
 
   switch (userChoice + computerChoice) {
     case "rockscissors":
     case "paperrock":
     case "scissorspaper":
-      console.log("user wins");
+      userWin();
       break;
     case "rockpaper":
     case "paperscissors":
     case "scissorsrock":
-      console.log("comp wins");
+      userLose();
       break;
     case "rockrock":
     case "paperpaper":
     case "scissorsscissors":
-      console.log("its a tie");
+      userTie();
       break;
   }
 };
