@@ -26,12 +26,23 @@ const userWin = (userChoice, computerChoice) => {
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${convertToUpperCase(
     userChoice
-  )} beats ${convertToUpperCase(computerChoice)} You Win! `;
+  )} beats ${convertToUpperCase(computerChoice)} You Win!`;
 };
 
-const userLose = () => {};
+const userLose = (userChoice, computerChoice) => {
+  computerScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_p.innerHTML = `${convertToUpperCase(
+    computerChoice
+  )} beats ${convertToUpperCase(userChoice)} You Lose! `;
+};
 
-const userTie = () => {};
+const userTie = (userChoice, computerChoice) => {
+  result_p.innerHTML = `${convertToUpperCase(
+    userChoice
+  )} ties ${convertToUpperCase(computerChoice)} It's a Tie `;
+};
 
 const game = userChoice => {
   const computerChoice = getComputerChoice();
