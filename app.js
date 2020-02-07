@@ -7,3 +7,7 @@ const result_div = document.querySelector(".resultMessage");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
+
+rock_div.addEventListener("click", function() {});
+paper_div.addEventListener("click", function() {});
+scissors_div.addEventListener("click", function() {});
