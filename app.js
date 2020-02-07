@@ -1,5 +1,5 @@
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById("userScore");
 const computerScore_span = document.getElementById("compScore");
 const scoreBoard_div = document.querySelector(".scoreBoard");
@@ -15,16 +15,13 @@ const getComputerChoice = () => {
 };
 
 const userWin = () => {
-  console.log("user wins");
+  userScore++;
+  console.log(userScore);
 };
 
-const userLose = () => {
-  console.log("user lose");
-};
+const userLose = () => {};
 
-const userTie = () => {
-  console.log("usre tie");
-};
+const userTie = () => {};
 
 const game = userChoice => {
   const computerChoice = getComputerChoice();
